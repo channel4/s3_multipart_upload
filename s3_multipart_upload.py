@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Fill some shit in here"""
+"""Here be the docstring"""
 
 import argparse
 import sys
@@ -26,7 +26,7 @@ def upload_file_to_s3(filename, dest):
     conn = boto.connect_s3()
     bucket = conn.lookup(dest)
     if bucket == None:
-        print 'fuck off'
+        print '... INSERT ERROR MESSAGE HERE!'
         sys.exit(-1)
 
     s3_key_name = os.path.basename(filename)
